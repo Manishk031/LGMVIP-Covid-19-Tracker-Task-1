@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Splash">
+
+
+    <TextView
+        android:id="@+id/txt_LGM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LGM"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/covid_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <ImageView
+           android:id="@+id/covid_img"
+           android:layout_width="250dp"
+           android:layout_height="250dp"
+           android:src="@drawable/covid"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           />
+
+    <TextView
+        android:id="@+id/covid_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Covid-19 Tracker"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/covid_img"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <TextView
+        android:id="@+id/txt_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by MK"
+        android:textStyle="italic"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/covid_tracker"
+        app:layout_constraintVertical_bias="0.86" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
