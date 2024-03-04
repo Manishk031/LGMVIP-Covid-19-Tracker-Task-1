@@ -12,7 +12,7 @@ class StateAdapter (private val stateList: List<model>) :
 
     class StateViewHolder(itemView:View) :RecyclerView.ViewHolder(itemView){
 
-        val stateName:TextView = itemView.findViewById(R.id.txt_state)
+        val stateName:TextView = itemView.findViewById(R.id.stateRecord)
         val stateCases:TextView= itemView.findViewById(R.id.state_cases)
         val stateRecovered:TextView= itemView.findViewById(R.id.state_recovered)
         val stateDeaths:TextView= itemView.findViewById(R.id.state_deaths)
