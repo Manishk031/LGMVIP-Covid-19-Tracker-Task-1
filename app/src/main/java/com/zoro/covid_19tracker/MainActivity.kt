@@ -15,33 +15,32 @@ import org.json.JSONException
 class MainActivity : AppCompatActivity() {
 
 
-    lateinit var worldCases: TextView
-    lateinit var worldRecover: TextView
-    lateinit var worldDeaths: TextView
+    private lateinit var worldCases: TextView
+    private lateinit var worldRecover: TextView
+    private lateinit var worldDeaths: TextView
+    private lateinit var countryCases: TextView
+    private lateinit var countryRecover: TextView
+    private lateinit var countryDeaths: TextView
+    private lateinit var state: RecyclerView
+    private lateinit var stateAdapter: StateAdapter
+    private lateinit var stateList: List<model>
 
-    lateinit var countryCases: TextView
-    lateinit var countryRecover: TextView
-    lateinit var countryDeaths: TextView
-
-    lateinit var state: RecyclerView
-
-    lateinit var stateAdapter: StateAdapter
-    lateinit var stateList: List<model>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        worldCases = findViewById(R.id.total_cases)
-        worldRecover = findViewById(R.id.total_Recovered)
-        worldDeaths = findViewById(R.id.total_deaths)
-
-        countryCases = findViewById(R.id.total_indian_cases)
-        countryRecover = findViewById(R.id.total_indian_Recovered)
-        countryDeaths = findViewById(R.id.total_indian_deaths)
-
-        state = findViewById(R.id.stateRecord)
+        worldCases = findViewById(R.id.idTVWorldCases)
+        worldRecover = findViewById(R.id.idTVWorldRecovered)
+        worldDeaths = findViewById(R.id.idTVWorldDeaths)
+        countryCases = findViewById(R.id.idTVIndiaCases)
+        countryRecover = findViewById(R.id.idTVIndianRecovered)
+        countryDeaths = findViewById(R.id.idTVIndianDeaths)
+        state = findViewById(R.id.idRVStates)
         stateList = ArrayList<model>()
+        getWorldInfo()
+        getStateInfo()
+
     }
 
     private fun getStateInfo() {
@@ -49,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         val url = "https://api.rootnet.in/covid19-in/stats/latest"
         val queue = Volley.newRequestQueue(this@MainActivity)
         val request = JsonObjectRequest(Request.Method.GET, url, null, { response ->
+
             try {
                 val dataObj = response.getJSONObject("data")
                 val summaryObj = dataObj.getJSONObject("summary")
@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
                 val deaths: Int = summaryObj.getInt("deaths")
 
                 countryCases.text = cases.toString()
-                countryRecover.text = cases.toString()
-                countryDeaths.text = cases.toString()
+                countryRecover.text = recovered.toString()
+                countryDeaths.text = deaths.toString()
 
                 val regionArray = dataObj.getJSONArray("regional")
                 for (i in 0 until regionArray.length()) {
@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                     val stateModel = model(stateName, cases, recovered, deaths)
                     stateList = stateList + stateModel
                 }
+
                 stateAdapter = StateAdapter(stateList)
                 state.layoutManager = LinearLayoutManager(this)
                 state.adapter = stateAdapter
@@ -85,5 +86,12 @@ class MainActivity : AppCompatActivity() {
             }
         })
         queue.add(request)
+    }
+    private fun getWorldInfo()
+    {
+
+
+
+
     }
 }

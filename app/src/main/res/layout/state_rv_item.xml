@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/stateRecord"
+            android:id="@+id/idTVState"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="State Record"
@@ -35,7 +35,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/state_cases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cases"
@@ -47,7 +46,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/total_state_cases"
+                    android:id="@+id/idTVCases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Number of Cases"
@@ -69,7 +68,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/state_recovered"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Recovered"
@@ -81,7 +79,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/total_state_Recovered"
+                    android:id="@+id/idTVRecovered"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Number of Recovered"
@@ -102,7 +100,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/state_deaths"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deaths"
@@ -114,7 +111,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/total_state_deaths"
+                    android:id="@+id/idTVDeaths"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Number of Deaths"

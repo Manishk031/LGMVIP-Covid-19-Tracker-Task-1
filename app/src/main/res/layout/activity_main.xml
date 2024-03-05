@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +21,6 @@
            android:orientation="vertical">
            
            <TextView
-               android:id="@+id/txt_world"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="World Wide Record"
@@ -43,7 +43,6 @@
                    android:orientation="vertical">
                    
                    <TextView
-                       android:id="@+id/txt_cases"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Cases"
@@ -55,7 +54,7 @@
                        android:textColor="@color/black"/>
 
                    <TextView
-                       android:id="@+id/total_cases"
+                       android:id="@+id/idTVWorldCases"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Number of Cases"
@@ -77,7 +76,6 @@
                    android:orientation="vertical">
 
                    <TextView
-                       android:id="@+id/txt_recovered"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Recovered"
@@ -89,7 +87,7 @@
                        android:textColor="@color/black"/>
 
                    <TextView
-                       android:id="@+id/total_Recovered"
+                       android:id="@+id/idTVWorldRecovered"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Number of Recovered"
@@ -110,7 +108,6 @@
                    android:orientation="vertical">
 
                    <TextView
-                       android:id="@+id/txt_deaths"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Deaths"
@@ -122,7 +119,7 @@
                        android:textColor="@color/black"/>
 
                    <TextView
-                       android:id="@+id/total_deaths"
+                       android:id="@+id/idTVWorldDeaths"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Number of Deaths"
@@ -161,7 +158,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txt_india"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Indian Record"
@@ -184,7 +180,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/indian_cases"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cases"
@@ -196,7 +191,7 @@
                         android:textColor="@color/black"/>
 
                     <TextView
-                        android:id="@+id/total_indian_cases"
+                        android:id="@+id/idTVIndiaCases"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Number of Cases"
@@ -218,7 +213,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/indian_recovered"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Recovered"
@@ -230,7 +224,7 @@
                         android:textColor="@color/black"/>
 
                     <TextView
-                        android:id="@+id/total_indian_Recovered"
+                        android:id="@+id/idTVIndianRecovered"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Number of Recovered"
@@ -251,7 +245,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/indian_deaths"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Deaths"
@@ -263,7 +256,7 @@
                         android:textColor="@color/black"/>
 
                     <TextView
-                        android:id="@+id/total_indian_deaths"
+                        android:id="@+id/idTVIndianDeaths"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Number of Deaths"
@@ -290,7 +283,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle"
+        android:id="@+id/idRVStates"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
